@@ -1,0 +1,150 @@
+#define IDD_DLG1 1000
+#define IDC_BTN1 1001
+#define IDC_BTN2 1002
+#define IDC_BTN3 1003
+#define IDC_BTN4 1004
+#define IDC_STC1 1005
+#define IDD_DLG2 1100
+#define IDC_STC2 1001
+#define IDC_EDT1 1002
+#define IDC_BTN5 1003
+#define IDC_STC3 1004
+#define IDC_STC4 1005
+#define IDC_PGB1 1006
+#define IDC_BTN6 1008
+#define IDC_BTN7 1009
+#define IDC_STC9 1104
+#define IDC_STC8 1103
+#define IDC_LST1 1105
+#define IDC_STC15 1101
+#define IDC_STC16 1102
+#define IDD_DLG3 1200
+#define IDC_GRP1 -1
+#define IDC_RBN1 1201
+#define IDC_RBN2 1202
+#define IDC_RBN3 1203
+#define IDC_RBN4 1204
+#define IDC_GRP2 -1
+#define IDC_STC5 7
+#define IDC_CBO1 1205
+#define IDC_STC7 -1
+#define IDD_DLG4 1300
+#define IDC_STC6 1302
+#define IDC_EDT2 1301
+#define IDD_DLG5 1400
+#define IDC_STC10 -1
+#define IDC_EDT3 1401
+#define IDC_STC11 1402
+#define IDC_EDT4 1403
+#define IDC_STC12 -1
+#define IDC_BTN10 1404
+#define IDC_BTN11 1405
+#define IDC_BTN13 1406
+#define IDC_STC13 1010
+#define IDC_STC14 1011
+#define IDC_BTN8 1407
+#define IDR_VERSION 1
+#define IDR_XPMANIFEST 1
+
+IDD_DLG1 DIALOGEX 5,6,320,217
+CAPTION "Sya Mate Unhidden [SMU]"
+FONT 10,"OCR A Extended",400,0,0
+STYLE 0x10CA0800
+BEGIN
+  CONTROL "Find",IDC_BTN1,"Button",0x58010000,1,5,56,20
+  CONTROL "Options",IDC_BTN2,"Button",0x50010000,1,31,56,20
+  CONTROL "About",IDC_BTN3,"Button",0x50010000,1,57,56,20
+  CONTROL "Exit",IDC_BTN4,"Button",0x50010000,1,83,56,20
+  CONTROL "",IDC_STC1,"Static",0x50001000,62,6,253,209
+END
+
+IDD_DLG2 DIALOGEX 0,0,333,207
+FONT 8,"MS Sans Serif",0,0,0
+STYLE 0x50000000
+BEGIN
+  CONTROL "Location",IDC_STC2,"Static",0x50000000,3,9,38,9
+  CONTROL "",IDC_EDT1,"Edit",0x50010800,50,6,237,12,0x00000200
+  CONTROL "Get",IDC_BTN5,"Button",0x50010000,293,6,37,12
+  CONTROL "Status:",IDC_STC3,"Static",0x50000000,3,24,38,9
+  CONTROL "",IDC_STC4,"Static",0x50001000,50,40,237,31
+  CONTROL "",IDC_PGB1,"msctls_progress32",0x50000001,50,73,237,9
+  CONTROL "SCAN...",IDC_BTN6,"Button",0x50010001,49,87,80,22
+  CONTROL "STOP!",IDC_BTN7,"Button",0x58010000,133,86,80,22
+  CONTROL "(idle)",IDC_STC9,"Static",0x50000000,50,24,237,9
+  CONTROL "Posisiton:",IDC_STC8,"Static",0x50000000,3,39,38,9
+  CONTROL "",IDC_LST1,"ListBox",0x50210141,50,120,240,80,0x00000200
+  CONTROL "Report",IDC_STC15,"Static",0x50000000,50,110,54,9
+  CONTROL "",IDC_STC16,"Static",0x50000000,290,73,27,9
+END
+
+IDD_DLG3 DIALOGEX 0,0,333,207
+FONT 8,"MS Sans Serif",0,0,0
+STYLE 0x50000000
+BEGIN
+  CONTROL "Scanning method",IDC_GRP1,"Button",0x50000007,3,3,327,77
+  CONTROL "File size comparations (fast but not accurate)",IDC_RBN1,"Button",0x50010009,16,18,177,9
+  CONTROL "crc32 comparations (accurate but slow)",IDC_RBN2,"Button",0x50010009,16,30,177,9
+  CONTROL "Date comparations (fast and more accurate than filesize)*",IDC_RBN3,"Button",0x58010009,16,43,227,9
+  CONTROL "Scan by name",IDC_RBN4,"Button",0x50010009,16,55,177,9
+  CONTROL "General",IDC_GRP2,"Button",0x50000007,3,83,327,71
+  CONTROL "Languages*",IDC_STC5,"Static",0x58000000,12,116,54,9
+  CONTROL "",IDC_CBO1,"ComboBox",0x58010003,56,114,98,50
+  CONTROL "*This features is not avaliable on alpha and beta version!",IDC_STC7,"Static",0x50000000,8,164,272,9
+END
+
+IDD_DLG4 DIALOGEX 0,0,286,192
+FONT 9,"Tahoma",400,0,0
+STYLE 0x50000000
+BEGIN
+  CONTROL "ver_info",IDC_STC6,"Static",0x50000001,5,2,274,34
+  CONTROL "license_txt",IDC_EDT2,"Edit",0x50211844,3,39,280,149,0x00000200
+END
+
+GNU RCDATA DISCARDABLE "../binary/GNU.TXT"
+TWINS ICON DISCARDABLE "twins.ico"
+
+IDD_DLG5 DIALOGEX 6,6,307,129
+CAPTION "ALERT"
+FONT 8,"MS Sans Serif",0,0,0
+STYLE 0x10C00880
+EXSTYLE 0x00000001
+BEGIN
+  CONTROL "The file:",IDC_STC10,"Static",0x50000000,20,3,54,9
+  CONTROL "",IDC_EDT3,"Edit",0x50010880,20,12,280,12,0x00000200
+  CONTROL "is same %s with:",IDC_STC11,"Static",0x50000000,20,27,280,9
+  CONTROL "",IDC_EDT4,"Edit",0x50010880,20,36,280,12,0x00000200
+  CONTROL "What do you want on these file?",IDC_STC12,"Static",0x50000000,3,55,297,9
+  CONTROL "Delete 1st file!",IDC_BTN10,"Button",0x50010000,3,67,300,12
+  CONTROL "Delete 2st file!",IDC_BTN11,"Button",0x50010000,3,83,300,12
+  CONTROL "Stop scan!",IDC_BTN13,"Button",0x50010000,3,98,300,12
+  CONTROL "1.",IDC_STC13,"Static",0x50000000,10,15,7,9
+  CONTROL "2.",IDC_STC14,"Static",0x50000000,10,40,7,9
+  CONTROL "Nothing...",IDC_BTN8,"Button",0x50010000,3,113,300,12
+END
+
+IDR_VERSION VERSIONINFO
+FILEVERSION 1,0,0,0
+PRODUCTVERSION 1,0,0,0
+FILEOS 0x00000004
+FILETYPE 0x00000000
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "FFFF0000"
+    BEGIN
+      VALUE "FileVersion", "1.0.0.0\0"
+      VALUE "ProductVersion", "1.0.0.0\0"
+      VALUE "CompanyName", "Edwin Pelleng <ewinprojex>\0"
+      VALUE "FileDescription", "Duplicate file scanner\0"
+      VALUE "InternalName", "DoubleRemover\0"
+      VALUE "LegalCopyright", "(L) 2008\0"
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0xFFFF, 0x0000
+  END
+END
+
+IDR_XPMANIFEST MANIFEST "xpmanifest.xml"
+
